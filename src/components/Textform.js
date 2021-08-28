@@ -31,9 +31,9 @@ export default function Textform(props) {
     
     return (
     <>
-        <div className="container">
+        <div className="container" style={{}}>
 
-<div className="mb-3">
+<div className="mb-3" style={{color:props.mode==='light'?'Dark':'light'}}>
     <h1>{props.heading}</h1>
   
   <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows="8"></textarea>
@@ -45,7 +45,7 @@ export default function Textform(props) {
         </div>
         <div className="container my-2">
             <h1>Your text summary</h1>
-            <p>{text.split(" ").length} words and {text.length} characters</p>
+            <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} words and {text.length} characters</p>
             <h2>preview</h2>
             <p>{text}</p>
         </div>
