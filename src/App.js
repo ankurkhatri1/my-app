@@ -31,6 +31,8 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#042743';
       showalert('dark mode has been enabled','success')
+      
+      
     }
     else{
       setMode('light');
@@ -53,7 +55,7 @@ function App() {
   </Route>*/}
          
           {/*<Route exec path="/">*/}
-          <Textform heading="Enter the text to analyze below" mode={mode}/>
+          <Textform heading="Enter the text to analyze below"  mode={mode}/>
             
          {/* </Route>*/}
         {/*</Switch>*/}
